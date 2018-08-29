@@ -184,6 +184,7 @@ public class Robot extends IterativeRobot
 	public void runElevator()
 	{
 		eleVader.setElevatorEncoder();
+		Wrist.moveWrist(joy.leftJoySticky1);
 		if(Shifter.piston.get() == DoubleSolenoid.Value.kReverse)
 		{
 			Elevator.moveEleVader(joy.rightJoySticky1 * 1);
